@@ -11,7 +11,6 @@ var ToyDetail = React.createClass({
   getStateFromStore: function(pokemonid, id){
     var pokemon = PokemonStore.find(parseInt(pokemonid));
     var toy = pokemon.toys.find(function(toy){ return toy.id === parseInt(id);});
-    console.log(pokemon);
     return toy;
   },
 

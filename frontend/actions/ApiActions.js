@@ -14,6 +14,13 @@ var ApiActions = {
       actionType: PokemonConstants.POKEMON_RECEIVED,
       pokemon: pokemon
     })
+  },
+
+  createPokemon: function(pokemon) {
+    Dispatcher.dispatch({
+      actionType: PokemonConstants.POKEMON_RECEIVED,
+      pokemon: pokemon
+    })
   }
 };
 

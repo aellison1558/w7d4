@@ -1,4 +1,5 @@
 var ApiActions = require('../actions/ApiActions');
+
 var ApiUtil = {
   fetch: function(){
     $.get('/api/pokemon', {}, function(pokemons){
@@ -9,6 +10,12 @@ var ApiUtil = {
   fetchPoke: function(id) {
     $.get('/api/pokemon/' + id, {}, function(pokemon) {
       ApiActions.receiveSinglePokemon(pokemon);
+    })
+  },
+
+  createPoke: function(data) {
+    $.post('/api/pokemon/', {pokemon: data}, function(response) {
+      ApiActions.createPokemon(response);
     })
   }
 }
